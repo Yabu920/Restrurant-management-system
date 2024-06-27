@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ################  CSS LINK   ################# -->
+    <link rel="stylesheet" href="../..//src/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../..//src/css/admin/adminpan.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../..//src/css/admin/adcustomer.css"
+    />
+
+    <!-- ################  Icon LINK   ################# -->
+    <script
+      src="https://kit.fontawesome.com/3d68b6bc01.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>admin panel page</title>
+  </head>
+  <body>
+    <main>
+      <div class="all-cont">
+        <div class="admin-cont">
+          <div class="admin-cont-left">
+            <div class="side-header">
+              <button>
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Resturant</h3>
+              </button>
+
+              <i id="closeAdminSide" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="side-list">
+              <a class="dashbord" href="dashbord.html"
+                ><i class="fa-solid fa-house"></i>Dashbord</a
+              >
+              <a class="order" href="orders.html"
+                ><i class="fa-solid fa-cart-shopping"></i>Order</a
+              >
+              <a class="book" href="booking.html"
+                ><i class="fa-solid fa-book"></i>Booking</a
+              >
+              <a class="add-food" href="addFood.html"
+                ><i class="fa-solid fa-utensils"></i>Add Food</a
+              >
+              <a class="adbar" href="adminbar.html"
+                ><i class="fa-solid fa-user-tie"></i>Admin</a
+              >
+              <a class="help" href="customer.html"
+                ><i class="fa-solid fa-users"></i>Customer</a
+              >
+              <a class="feedback" href="feedback.html"
+                ><i class="fa-solid fa-comment"></i>FeedBack</a
+              >
+            </div>
+            <div class="side-logout-btn">
+              <a href="../..//admin/adsignin.html"
+                ><button>LogOut</button></a
+              >
+            </div>
+          </div>
+          <div class="admin-cont-right">
+            <div class="admin-cont-right-header">
+              <div class="right-header-comp">
+                <div class="search-comp">
+                  <i class="fa-solid fa-bars" id="adminNavi"></i>
+                  <label for="search"></label>
+                  <input id="search" type="search" placeholder="search" />
+                </div>
+                <div class="info-comp">
+                  <button class="btn-one">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="noti-count">0</span>
+                  </button>
+                  <button class="btn-two">
+                    <img
+                      src="../..//src/css/img/adminpanprofile.png"
+                      alt="person pictiure"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="admin-cont-right-body">
+              <div class="ad-body-cont-nav">
+                <h1>Customers</h1>
+              </div>
+
+              <div class="ad-body-cont-table">
+                <table class="order-table">
+                  <thead>
+                    <tr>
+                      <th>C.Img</th>
+                      <th>C.Id</th>
+                      <th>C.Name</th>
+                      <th>C. Registeration Date</th>
+                      <th>C. order before</th>
+                      <th>C. booking before</th>
+                      <th>Mostly ordering</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="person-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>RES/123/BR</td>
+                      <td>abcdef</td>
+                      <td>--/--/----</td>
+                      <td>30x</td>
+                      <td>10x</td>
+                      <td>Burger</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="person-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>RES/123/BR</td>
+                      <td>abcdef</td>
+                      <td>--/--/----</td>
+                      <td>30x</td>
+                      <td>10x</td>
+                      <td>Burger</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="person-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>RES/123/BR</td>
+                      <td>abcdef</td>
+                      <td>--/--/----</td>
+                      <td>30x</td>
+                      <td>10x</td>
+                      <td>Burger</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="person-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>RES/123/BR</td>
+                      <td>abcdef</td>
+                      <td>--/--/----</td>
+                      <td>30x</td>
+                      <td>10x</td>
+                      <td>Burger</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="person-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>RES/123/BR</td>
+                      <td>abcdef</td>
+                      <td>--/--/----</td>
+                      <td>30x</td>
+                      <td>10x</td>
+                      <td>Burger</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../..//src/js/adminsidebar.js"></script>
+  </body>
+</html>

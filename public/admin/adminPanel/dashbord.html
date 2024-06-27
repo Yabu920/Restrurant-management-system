@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ################  CSS LINK   ################# -->
+    <link rel="stylesheet" href="../..//src/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../..//src/css/admin/adminpan.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../..//src/css/admin/adPanelDashbord.css"
+    />
+
+    <!-- ################  Icon LINK   ################# -->
+    <script
+      src="https://kit.fontawesome.com/3d68b6bc01.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ################### chart script ##################### -->
+    <!-- chart script one -->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Year", "Sales", "Most"],
+          ["2024/01", 1000, 400],
+          ["2024/02", 1170, 460],
+          ["2024/03", 660, 1120],
+          ["2024/04", 1030, 540],
+        ]);
+
+        var options = {
+          title: "Most Selling Date",
+          curveType: "",
+          legend: { position: "bottom" },
+        };
+
+        var chart = new google.visualization.LineChart(
+          document.getElementById("curve_chart")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    <!-- chart script two -->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Task", "Hours per Day"],
+          ["Burger", 11],
+          ["Pizza", 2],
+          ["Cake", 2],
+          ["Donat", 2],
+          ["Fish", 7],
+          ["wiski", 5],
+        ]);
+
+        var options = {
+          title: "Most selled Foods",
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("donutchart")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+
+    <title>admin panel page</title>
+  </head>
+  <body>
+    <main>
+      <div class="all-cont">
+        <div class="admin-cont">
+          <div class="admin-cont-left">
+            <div class="side-header">
+              <button>
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Resturant</h3>
+              </button>
+
+              <i id="closeAdminSide" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="side-list">
+              <a class="dashbord" href="dashbord.html"
+                ><i class="fa-solid fa-house"></i>Dashbord</a
+              >
+              <a class="order" href="orders.html"
+                ><i class="fa-solid fa-cart-shopping"></i>Order</a
+              >
+              <a class="book" href="booking.html"
+                ><i class="fa-solid fa-book"></i>Booking</a
+              >
+              <a class="add-food" href="addFood.html"
+                ><i class="fa-solid fa-utensils"></i>Add Food</a
+              >
+              <a class="adbar" href="adminbar.html"
+                ><i class="fa-solid fa-user-tie"></i>Admin</a
+              >
+              <a class="help" href="customer.html"
+                ><i class="fa-solid fa-users"></i>Customer</a
+              >
+              <a class="feedback" href="feedback.html"
+                ><i class="fa-solid fa-comment"></i>FeedBack</a
+              >
+            </div>
+            <div class="side-logout-btn">
+              <a href="../..//admin/adsignin.html"
+                ><button>LogOut</button></a
+              >
+            </div>
+          </div>
+          <div class="admin-cont-right">
+            <div class="admin-cont-right-header">
+              <div class="right-header-comp">
+                <div class="search-comp">
+                  <i class="fa-solid fa-bars" id="adminNavi"></i>
+                  <label for="search"></label>
+                  <input id="search" type="search" placeholder="search" />
+                </div>
+                <div class="info-comp">
+                  <button class="btn-one">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="noti-count">0</span>
+                  </button>
+                  <button class="btn-two">
+                    <img
+                      src="../..//src/css/img/adminpanprofile.png"
+                      alt="person pictiure"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="admin-cont-right-body">
+              <div class="ad-body-cont-one">
+                <div class="box box-one">
+                  <div class="text">
+                    <h1>Burger</h1>
+                    <h3>113/Day</h3>
+                    <p>Top rated food</p>
+                  </div>
+                  <div class="disc">
+                    <img
+                      src="../..//src/css/img/tdspetial.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="box box-two">
+                  <div class="text">
+                    <h3>340</h3>
+                    <p>Selled Today</p>
+                  </div>
+                  <div class="disc">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                </div>
+                <div class="box box-three">
+                  <div class="text">
+                    <h3>340</h3>
+                    <p>Selled Today</p>
+                  </div>
+                  <div class="disc">
+                    <i class="fa-regular fa-comment-dots"></i>
+                  </div>
+                </div>
+                <div class="box box-four">
+                  <div class="text">
+                    <h3><span>$</span>14000</h3>
+                    <p>Earn Today</p>
+                  </div>
+                  <div class="disc">
+                    <i class="fa-solid fa-money-bill"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ad-body-cont-two">
+                <div class="cont-two-left">
+                  <div id="curve_chart"></div>
+                </div>
+                <div class="cont-two-right">
+                  <div id="donutchart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../..//src/js/adminsidebar.js"></script>
+  </body>
+</html>

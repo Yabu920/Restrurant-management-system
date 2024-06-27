@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ################  CSS LINK   ################# -->
+    <link rel="stylesheet" href="../..//src/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../..//src/css/admin/adminpan.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../..//src/css/admin/adBooking.css"
+    />
+
+    <!-- ################  Icon LINK   ################# -->
+    <script
+      src="https://kit.fontawesome.com/3d68b6bc01.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>admin panel page</title>
+  </head>
+  <body>
+    <main>
+      <div class="all-cont">
+        <div class="admin-cont">
+          <div class="admin-cont-left">
+            <div class="side-header">
+              <button>
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Resturant</h3>
+              </button>
+
+              <i id="closeAdminSide" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="side-list">
+              <a class="dashbord" href="dashbord.html"
+                ><i class="fa-solid fa-house"></i>Dashbord</a
+              >
+              <a class="order" href="orders.html"
+                ><i class="fa-solid fa-cart-shopping"></i>Order</a
+              >
+              <a class="book" href="booking.html"
+                ><i class="fa-solid fa-book"></i>Booking</a
+              >
+              <a class="add-food" href="addFood.html"
+                ><i class="fa-solid fa-utensils"></i>Add Food</a
+              >
+              <a class="adbar" href="adminbar.html"
+                ><i class="fa-solid fa-user-tie"></i>Admin</a
+              >
+              <a class="help" href="customer.html"
+                ><i class="fa-solid fa-users"></i>Customer</a
+              >
+              <a class="feedback" href="feedback.html"
+                ><i class="fa-solid fa-comment"></i>FeedBack</a
+              >
+            </div>
+            <div class="side-logout-btn">
+              <a href="../..//admin/adsignin.html"
+                ><button>LogOut</button></a
+              >
+            </div>
+          </div>
+          <div class="admin-cont-right">
+            <div class="admin-cont-right-header">
+              <div class="right-header-comp">
+                <div class="search-comp">
+                  <i class="fa-solid fa-bars" id="adminNavi"></i>
+                  <label for="search"></label>
+                  <input id="search" type="search" placeholder="search" />
+                </div>
+                <div class="info-comp">
+                  <button class="btn-one">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="noti-count">0</span>
+                  </button>
+                  <button class="btn-two">
+                    <img
+                      src="../..//src/css/img/adminpanprofile.png"
+                      alt="person pictiure"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="admin-cont-right-body">
+              <div class="ad-body-cont-vav">
+                <div class="ad-nav-header">
+                  <h1>Booking</h1>
+                  <p>Hear is the booker list</p>
+                </div>
+                <div class="ad-nav-filter">
+                  <select name="order date" id="orderCal">
+                    <option value="today">today</option>
+                  </select>
+                  <span class="cal-icon"
+                    ><i class="fa-regular fa-calendar-days"></i
+                  ></span>
+                </div>
+              </div>
+
+              <div class="ad-body-cont-table">
+                <table class="order-table">
+                  <thead>
+                    <tr>
+                      <th>Booking Id</th>
+                      <th>Customer Name</th>
+                      <th>Date</th>
+                      <th>Time</th>
+                      <th>Table No.</th>
+                      <th>No. of gust</th>
+                      <th>Discription</th>
+                      <th>No. Booking Before</th>
+                      <th>Confirm</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>res/1234/aa</td>
+                      <td>Samuel</td>
+                      <td>10/10/10</td>
+                      <td>10:10</td>
+                      <td>5</td>
+                      <td>3</td>
+                      <td>VIP</td>
+                      <td>13</td>
+                      <td><button class="cmd">Coming</button></td>
+                    </tr>
+                    <tr>
+                      <td>res/1234/aa</td>
+                      <td>Samuel</td>
+                      <td>10/10/10</td>
+                      <td>10:10</td>
+                      <td>5</td>
+                      <td>8</td>
+                      <td>VIP</td>
+                      <td>1</td>
+                      <td><button class="ncmd">Not Coming</button></td>
+                    </tr>
+                    <tr>
+                      <td>res/1234/aa</td>
+                      <td>Samuel</td>
+                      <td>10/10/10</td>
+                      <td>10:10</td>
+                      <td>5</td>
+                      <td>3</td>
+                      <td>Normal</td>
+                      <td>5</td>
+                      <td><button class="ncmd">Not Coming</button></td>
+                    </tr>
+                    <tr>
+                      <td>res/1234/aa</td>
+                      <td>Samuel</td>
+                      <td>10/10/10</td>
+                      <td>10:10</td>
+                      <td>5</td>
+                      <td>2</td>
+                      <td>VVIP</td>
+                      <td>10</td>
+                      <td><button class="cmd">Coming</button></td>
+                    </tr>
+                    <tr>
+                      <td>res/1234/aa</td>
+                      <td>Samuel</td>
+                      <td>10/10/10</td>
+                      <td>10:10</td>
+                      <td>5</td>
+                      <td>5</td>
+                      <td>Normal</td>
+                      <td>6</td>
+                      <td><button class="lod">Loding...</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../..//src/js/adminsidebar.js"></script>
+  </body>
+</html>

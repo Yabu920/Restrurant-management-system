@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ################  CSS LINK   ################# -->
+    <link rel="stylesheet" href="../..//src/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../..//src/css/admin/adminpan.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../..//src/css/admin/adminside.css"
+    />
+
+    <!-- ################  Icon LINK   ################# -->
+    <script
+      src="https://kit.fontawesome.com/3d68b6bc01.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>admin panel page</title>
+  </head>
+  <body>
+    <main>
+      <div class="all-cont">
+        <div class="admin-cont">
+          <div class="admin-cont-left">
+            <div class="side-header">
+              <button>
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Resturant</h3>
+              </button>
+
+              <i id="closeAdminSide" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="side-list">
+              <a class="dashbord" href="dashbord.html"
+                ><i class="fa-solid fa-house"></i>Dashbord</a
+              >
+              <a class="order" href="orders.html"
+                ><i class="fa-solid fa-cart-shopping"></i>Order</a
+              >
+              <a class="book" href="booking.html"
+                ><i class="fa-solid fa-book"></i>Booking</a
+              >
+              <a class="add-food" href="addFood.html"
+                ><i class="fa-solid fa-utensils"></i>Add Food</a
+              >
+              <a class="adbar" href="adminbar.html"
+                ><i class="fa-solid fa-user-tie"></i>Admin</a
+              >
+              <a class="help" href="customer.html"
+                ><i class="fa-solid fa-users"></i>Customer</a
+              >
+              <a class="feedback" href="feedback.html"
+                ><i class="fa-solid fa-comment"></i>FeedBack</a
+              >
+            </div>
+            <div class="side-logout-btn">
+              <a href="../..//admin/adsignin.html"
+                ><button>LogOut</button></a
+              >
+            </div>
+          </div>
+          <div class="admin-cont-right">
+            <div class="admin-cont-right-header">
+              <div class="right-header-comp">
+                <div class="search-comp">
+                  <i class="fa-solid fa-bars" id="adminNavi"></i>
+                  <label for="search"></label>
+                  <input id="search" type="search" placeholder="search" />
+                </div>
+                <div class="info-comp">
+                  <button class="btn-one">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="noti-count">0</span>
+                  </button>
+                  <button class="btn-two">
+                    <img
+                      src="../..//src/css/img/adminpanprofile.png"
+                      alt="person pictiure"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="admin-cont-right-body">
+              <div class="ad-body-cont-one">
+                <div class="add-food-body-header">
+                  <h1>Add employ</h1>
+                  <p>add new employ</p>
+                </div>
+                <form id="form" action="/" method="post">
+                  <div>
+                    <label for="fname">First Name</label>
+                    <input
+                      id="fname"
+                      type="text"
+                      placeholder="Enter first name"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="lname">Last Name</label>
+                    <input
+                      id="sname"
+                      type="text"
+                      placeholder="Enter last name"
+                    />
+                  </div>
+
+                  <div class="gender-rad">
+                    <input id="male" type="radio" name="gender" value="Male" />
+                    <label for="male">Male</label>
+                    <input
+                      id="female"
+                      type="radio"
+                      name="gender"
+                      value="Female"
+                    />
+                    <label for="female">Female</label>
+                  </div>
+                  <div>
+                    <label for="dob">Date Of Birth</label>
+                    <input id="dob" type="date" placeholder="DOB" />
+                  </div>
+
+                  <div>
+                    <label for="price">Wage Before Vat</label>
+                    <input
+                      id="price"
+                      type="text"
+                      placeholder="Price before vat"
+                    />
+                  </div>
+
+                  <label for="catagory">Employed By</label>
+                  <select id="category" name="category">
+                    <option value="select catagory">Employed By</option>
+                    <option value="vegitable">Cooker</option>
+                    <option value="desert">Witer</option>
+                    <option value="apetizer">Cliner</option>
+                  </select>
+                  <div>
+                    <label for="imgf">Only JPG, PNG, JPEG and PDF File</label>
+                    <input
+                      id="imgfile"
+                      type="file"
+                      name="imageInput"
+                      id="imgInput"
+                      accept="image/jpg, image/png, image/jpeg, image/pdf"
+                    />
+                  </div>
+
+                  <br />
+                  <button>Submit</button>
+                </form>
+              </div>
+
+              <div class="ad-body-cont-table">
+                <table class="order-table">
+                  <thead>
+                    <tr>
+                      <th>Employ Img</th>
+                      <th>Employ Full Name</th>
+                      <th>Gender</th>
+                      <th>DOB</th>
+                      <th>Wage Before Tax</th>
+                      <th>Wage After Tax</th>
+                      <th>Employ Date</th>
+                      <th>Employ Information</th>
+                      <th>Employed BY</th>
+                      <th>Edit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="food-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>abcd efgh</td>
+                      <td>M</td>
+                      <td>10/10/10</td>
+                      <td>$3000</td>
+                      <td>$2700</td>
+                      <td>20/20/2024</td>
+                      <td>file</td>
+                      <td>coocking</td>
+                      <td><button class="edit-employer">Edit</button></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="food-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>abcd efgh</td>
+                      <td>M</td>
+                      <td>10/10/10</td>
+                      <td>$3000</td>
+                      <td>$2700</td>
+                      <td>20/20/2024</td>
+                      <td>file</td>
+                      <td>coocking</td>
+                      <td><button class="edit-employer">Edit</button></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="food-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>abcd efgh</td>
+                      <td>M</td>
+                      <td>10/10/10</td>
+                      <td>$3000</td>
+                      <td>$2700</td>
+                      <td>20/20/2024</td>
+                      <td>file</td>
+                      <td>coocking</td>
+                      <td><button class="edit-employer">Edit</button></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="food-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>abcd efgh</td>
+                      <td>M</td>
+                      <td>10/10/10</td>
+                      <td>$3000</td>
+                      <td>$2700</td>
+                      <td>20/20/2024</td>
+                      <td>file</td>
+                      <td>coocking</td>
+                      <td><button class="edit-employer">Edit</button></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="food-img">
+                          <img
+                            src="../..//src/css/img/adminpanprofile.png"
+                            alt="appetizer img"
+                          />
+                        </div>
+                      </td>
+                      <td>abcd efgh</td>
+                      <td>M</td>
+                      <td>10/10/10</td>
+                      <td>$3000</td>
+                      <td>$2700</td>
+                      <td>20/20/2024</td>
+                      <td>file</td>
+                      <td>coocking</td>
+                      <td><button class="edit-employer">Edit</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- add stracture for edit food container that popup when onclick the edit bnt -->
+      <div class="edit-employ-container">
+        <div class="edit-employer-body-header">
+          <h1>Edit Food</h1>
+          <i id="editEmployClose" class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="edit-employer-form-list">
+          <form action="/" method="post">
+            <label for="fname">First Name</label>
+            <input
+              id="fname"
+              type="text"
+              placeholder="Enter food name"
+              required
+            />
+            <label for="lname">Last Name</label>
+            <input
+              id="lname"
+              type="text"
+              placeholder="Enter food name"
+              required
+            />
+            <div class="gender-rad">
+              <input type="radio" id="male" name="gender" value="Male" />
+              <label for="male">Male</label>
+              <input
+                id="female"
+                type="radio"
+                id="female"
+                name="gender"
+                value="Female"
+              />
+              <label for="female">Female</label>
+            </div>
+            <label for="price">Date Of Birth</label>
+            <input id="price" type="text" placeholder="DOB" required />
+            <label for="price">Wage Before Vat</label>
+            <input
+              id="price"
+              type="text"
+              placeholder="Price before vat"
+              required
+            />
+            <label for="catagory">Employed By</label>
+            <select id="category" name="category">
+              <option value="select catagory">Employed By</option>
+              <option value="vegitable">Cooker</option>
+              <option value="desert">Witer</option>
+              <option value="apetizer">Cliner</option>
+            </select>
+            <label for="imgf">Only JPG, PNG, JPEG and PDF File</label>
+            <input
+              id="imgf"
+              type="file"
+              name="imageInput"
+              id="imgInput"
+              accept="image/jpg, image/png, image/jpeg, fil"
+            />
+            <br />
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="../..//src/js/adminemployvalidation.js"></script>
+    <script src="../..//src/js/adminsidebar.js"></script>
+    <script src="../..//src/js/adminaddemploy.js"></script>
+  </body>
+</html>
